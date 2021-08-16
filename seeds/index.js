@@ -31,7 +31,17 @@ const seedDB = async () => {
             title: `${sample(descriptors)} ${sample(places)}`,
             image: 'https://source.unsplash.com/collection/483251',
             description: 'SAUDADES DO MOZÃO!',
-            price
+            price,
+            images: [
+                {
+                  url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898002/YelpCamp/xohmkzyrpi7tggvzoxbm.jpg',
+                  filename: 'YelpCamp/xohmkzyrpi7tggvzoxbm'
+                },
+                {
+                  url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898011/YelpCamp/l4bcj8els4uxicusx11m.jpg',
+                  filename: 'YelpCamp/l4bcj8els4uxicusx11m'
+                }
+              ]
         })
         await camp.save();
     }
