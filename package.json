@@ -1,10 +1,11 @@
 {
-  "name": "YelpCamp-App-exercise",
+  "name": "yelpcamp-app-exercise",
   "version": "1.0.0",
   "description": "End APP exercise to conclude \"The Web Developer Bootcamp 2021\"",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
