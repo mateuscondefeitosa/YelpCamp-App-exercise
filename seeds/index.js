@@ -30,7 +30,7 @@ const seedDB = async () => {
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             image: 'https://source.unsplash.com/collection/483251',
-            description: 'SAUDADES DO MOZÃO!',
+            description: 'JUST A SEED CAMPGROUND',
             price,
             geometry: {
                 type: "Point",
@@ -41,11 +41,11 @@ const seedDB = async () => {
             },
             images: [
                 {
-                    url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898002/YelpCamp/xohmkzyrpi7tggvzoxbm.jpg',
+                    url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628885702/YelpCamp/dtolp0kutelqg5wnk5ca.jpg',
                     filename: 'YelpCamp/xohmkzyrpi7tggvzoxbm'
                 },
                 {
-                    url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898011/YelpCamp/l4bcj8els4uxicusx11m.jpg',
+                    url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628885702/YelpCamp/dtolp0kutelqg5wnk5ca.jpg',
                     filename: 'YelpCamp/l4bcj8els4uxicusx11m'
                 }
             ]
