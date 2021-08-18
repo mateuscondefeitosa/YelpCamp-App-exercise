@@ -22,7 +22,7 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 300; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
@@ -32,16 +32,23 @@ const seedDB = async () => {
             image: 'https://source.unsplash.com/collection/483251',
             description: 'SAUDADES DO MOZÃO!',
             price,
+            geometry: {
+                type: "Point",
+                coordinates: [
+                    cities[random1000].longitude,
+                    cities[random1000].latitude,
+                ],
+            },
             images: [
                 {
-                  url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898002/YelpCamp/xohmkzyrpi7tggvzoxbm.jpg',
-                  filename: 'YelpCamp/xohmkzyrpi7tggvzoxbm'
+                    url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898002/YelpCamp/xohmkzyrpi7tggvzoxbm.jpg',
+                    filename: 'YelpCamp/xohmkzyrpi7tggvzoxbm'
                 },
                 {
-                  url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898011/YelpCamp/l4bcj8els4uxicusx11m.jpg',
-                  filename: 'YelpCamp/l4bcj8els4uxicusx11m'
+                    url: 'https://res.cloudinary.com/drnsdu8lq/image/upload/v1628898011/YelpCamp/l4bcj8els4uxicusx11m.jpg',
+                    filename: 'YelpCamp/l4bcj8els4uxicusx11m'
                 }
-              ]
+            ]
         })
         await camp.save();
     }

@@ -83,7 +83,7 @@ app.use('/campgrounds/:id/reviews', reviewRoutes);
 
 // HOME
 app.get('/', (req, res) => {
-    res.send('YELPPPP');
+    res.render('./home');
 });
 
 // ERROR 404
